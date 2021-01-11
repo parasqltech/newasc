@@ -14,7 +14,8 @@ class FAQ extends Component {
     }
 	
 	state = {
-		PageData: []
+		PageData: [],
+		result: 0
 	}
 	
 	componentDidMount() {
@@ -38,6 +39,7 @@ class FAQ extends Component {
 			}
 		}).then(res => {
 			this.setState({PageData: res.data.data.page.faq})
+			this.setState({result: 1})
 			console.log(res.data.data);
 		})
 	}
@@ -80,7 +82,7 @@ class FAQ extends Component {
 					<Container>
 						<div className="Faq-Section-2-data accordian-div">
 							<Accordion defaultActiveKey="1">
-								{(this.state.PageData !== null) ? (
+								{(this.state.result == 1) ? (
 									<>
 									{this.state.PageData.faq.map((str,i) => 
 										<>
