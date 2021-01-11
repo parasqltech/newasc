@@ -10,7 +10,7 @@ class FAQ extends Component {
 	
 	constructor(props) {
 		super(props);
-		console.log(this.props);
+		
     }
 	
 	state = {
@@ -38,7 +38,7 @@ class FAQ extends Component {
 			}
 		}).then(res => {
 			this.setState({PageData: res.data.data.page.faq})
-			console.log(res.data.data.page.faq);
+			console.log(res.data.data);
 		})
 	}
 	
@@ -80,7 +80,7 @@ class FAQ extends Component {
 					<Container>
 						<div className="Faq-Section-2-data accordian-div">
 							<Accordion defaultActiveKey="1">
-								{(this.state.PageData !== "") ? (
+								{(this.state.PageData !== null) ? (
 									<>
 									{this.state.PageData.faq.map((str,i) => 
 										<>
