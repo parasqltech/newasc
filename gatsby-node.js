@@ -23,7 +23,7 @@ const getData = async () => {
 						title
 						content
 						sliderImage {
-						  sourceUrl
+						  sourceUrl(size: LARGE)
 						}
 					  }
 					   bottomKidsReview {
@@ -31,7 +31,7 @@ const getData = async () => {
 						subTitle1
 						subTitle2
 						image {
-						  sourceUrl
+						  sourceUrl(size: LARGE)
 						}
 					  }
 					  schoolHolidayProgram {
@@ -39,12 +39,12 @@ const getData = async () => {
 						subTitle
 						title
 						image {
-						  sourceUrl
+						  sourceUrl(size: LARGE)
 						}
 					  }
 					  asSeenOn {
 						image {
-						  sourceUrl
+						  sourceUrl(size: LARGE)
 						}
 					  }
 					   howDoesItWork {
@@ -76,7 +76,7 @@ const getData = async () => {
 							cssClass
 						  }
 						  backgroundImage {
-							sourceUrl(size: ENTRY)
+							sourceUrl(size: LARGE)
 						  }
 						}
 						... on Page_Home_Panels_Camps {
@@ -92,7 +92,7 @@ const getData = async () => {
 							  }
 							}
 							image {
-							  sourceUrl(size: ENTRY)
+							  sourceUrl(size: LARGE)
 							}
 							smallDesc
 						  }
@@ -104,7 +104,7 @@ const getData = async () => {
 							title
 							fieldGroupName
 							image {
-							  sourceUrl(size: ENTRY)
+							  sourceUrl(size: LARGE)
 							}
 						  }
 						}
@@ -115,7 +115,7 @@ const getData = async () => {
 						  star {
 							description
 							image {
-							  sourceUrl(size: ENTRY)
+							  sourceUrl(size: LARGE)
 							}
 							fieldGroupName
 							name
